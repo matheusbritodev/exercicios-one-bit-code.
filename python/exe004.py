@@ -7,11 +7,9 @@ Faça um programa que calcule a tabuada de um número, com valores iniciais e fi
 '''
 
 #Primeiro exercício
-import winsound
 import time
 for num in range(10, -1, -1):
     print(num)
-    winsound(2500, 500)
     time.sleep(1)
     if num == 0:
         print('beep!')
@@ -22,4 +20,4 @@ num = int(input('Digite um número: '))
 print(f'Tabuada do número: {num}')
 for i in range(1, 21):
     final = i * num
-    print(f'{num} x {i:02} = {final}')
+    print(f'{num} x {i} = {final}')
