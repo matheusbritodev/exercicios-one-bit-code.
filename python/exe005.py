@@ -25,6 +25,8 @@ def contaPalavras(frase):
 
 #Segundo exercício
 lista_random = [23, 45, 10, 53, 6, 19, 38, 27, 36]
+titulo1 = 'LISTA PAR'
+titulo2 = 'LISTA ÍMPAR'
 def separador(lista_random):
     par = []
     impar = []
@@ -33,9 +35,6 @@ def separador(lista_random):
             par.append(num)
         else:
             impar.append(num)
-    return par, impar
-    titulo1 = 'LISTA PAR'
-    titulo2 = 'LISTA ÍMPAR'
     print(f'{titulo1.center(30, '-')}\n{par}\n{titulo2.center(30, '-')}\n{impar}')
 
 separador(lista_random)
