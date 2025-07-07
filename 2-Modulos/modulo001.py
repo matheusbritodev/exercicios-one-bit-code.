@@ -1,5 +1,3 @@
-string = 'juventude'
-
 def inverter(x):
     x = x[::-1]
     return x
@@ -9,5 +7,5 @@ def letrasIndicePar(x):
     return x
 
 def letrasIndiceImpar(x):
-    x = x[0::2]
+    x = x[::2]
     return x
