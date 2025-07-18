@@ -9,31 +9,32 @@ Lê o número que o usuário digitar via input e comparar se é o mesmo número 
 
 import random
 
+#Função para gerar o número e retornar se chegou próximo ou não de acertar
 def gerar_num():
-    tentativas = 3
+    chance = 3 #O usuário tem 3 tentativas para acertar
     number = random.randint(1, 10)
-    while tentativas > 0:
-        num_selecionado = int(input("Digite um número de 1 a 10:\n> "))
-        tentativas -= 1
-        if num_selecionado == number:
+    while chance > 0:
+        user_choice = int(input("Digite um número de 1 a 10:\n> "))
+        chance -= 1 #A cada erro diminui uma tentativa
+        if user_choice == number:
             print(f"Parabéns! Você acertou!\nO número sorteado foi: {number}.")
-            break
-        elif num_selecionado > number:
+            break #Esse break permite que o usuário retorne para o menu inicial e decida se quer jogar novamente ou não
+        elif user_choice > number:
             print("Muito alto!")
-        elif num_selecionado < number:
+        elif user_choice < number:
             print("Muito baixo!")
-        if tentativas == 0:
+        elif chance == 0:
             print(f"Tentativas esgotadas! O número sorteado foi: {number}\nGAME OVER.")
-            break
-        elif num_selecionado == number:
-            print(f"Parabéns! Você acertou!\nO número sorteado foi: {number}.")
-            break
+            break #Esse break permite que o usuário retorne para o menu inicial e decida se quer jogar novamente ou não
         else:
             pass
 
+game_title = "JOGO DA ADVINHAÇÃO"
+#Menu do jogo
 while True:
-    print(f"\nJogo da Advinhação:\nVocê tem 3 tentativas para advinhar o número sorteado.\n\n1 - Jogar\n2 - Sair")
-    choice = input("> ")
+    print(f"\n{game_title.center(53, "=")}")
+    #Opção de jogar ou asir do jogo
+    choice = input("Você tem 3 tentativas para advinhar o número sorteado.\n\n1 - Jogar\n2 - Sair\n> ")
     if choice == "1":
         gerar_num()
     elif choice == "2":
@@ -41,4 +42,3 @@ while True:
         break
     else:
         print("Opção inválida!\nEscolha entre uma das duas opções. (ex: 1)")
-
