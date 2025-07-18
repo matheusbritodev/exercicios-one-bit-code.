@@ -7,12 +7,11 @@ Utilizar o módulo random para gerar valores aleatórios dentro de um intervalo.
 Lê o número que o usuário digitar via input e comparar se é o mesmo número que o programa sorteou.
 """
 
-import random
-
+from random import randint
 #Função para gerar o número e retornar se chegou próximo ou não de acertar
 def gerar_num():
     chance = 3 #O usuário tem 3 tentativas para acertar
-    number = random.randint(1, 10)
+    number = randint(1, 10)
     while chance > 0:
         user_choice = int(input("Digite um número de 1 a 10:\n> "))
         chance -= 1 #A cada erro diminui uma tentativa

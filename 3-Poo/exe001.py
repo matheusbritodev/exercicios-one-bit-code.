@@ -21,7 +21,7 @@ class Filme:
 
     def info_tec(self):
         print(f"\n{"#" * 71}\n\n---Informações do Filme---\n")
-        print(f"Nome do filme: {self.nome}\nAno de lançamento: {self.anoDeLancamento}\nIncluído no plano: {self.incluidoNoPlano}\nAvaliação: {self.nota}\nDuração do filme: {self.duracao}\n\n{"#" * 71}")
+        print(f"Nome do filme: {self.nome}\nAno de lançamento: {self.anoDeLancamento}\nIncluído no plano: {self.incluidoNoPlano}\nAvaliação: {self.nota}\nDuração do filme em Min: {self.duracao}\n\n{"#" * 71}")
 
 #FILME 1
 como_treinar_seu_dragao = Filme("Como treinar o seu dragão: Live Action", 2025, True, 185)
